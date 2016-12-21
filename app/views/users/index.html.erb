@@ -1,7 +1,16 @@
-<h1>Users#index</h1>
+<h1>Users</h1>
 
 <div ng-app="app">
   <div ng-controller="stuffCtrl">
-  {{ 1 + 1 }}
+    <ul>
+      <li ng-repeat="user in users" ng-if="isVisible(user)" ng-click="bioToggle">
+        <p>{{ user.name }}</p>
+        <p>{{ user.bio }}</p>
+      </li>
+    </ul>
+    <h2>Add a Person!</h2>
+    <label>Name:</label><input ng-model="newUserName">
+    <label>Name:</label><input ng-model="newUserName">
+    
   </div>
 </div>
